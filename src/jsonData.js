@@ -75,15 +75,29 @@
 
 //console.log(Emplyees[0].batters.batter[3].type);
 //console.log(Emplyees[2].topping[2].type)
- let change = (Emplyees) => {
-	for(let i in Emplyees){
-		if(Emplyees[i].batters){
-			Emplyees.batters[0].id;
+
+//  let change = (Emplyees) => {
+// 	for(let i in Emplyees){
+// 		if(Emplyees[i].batters){
+// 			Emplyees.batters[0].id;
+// 		}
+
+// 	}
+//  };
+//  change(Emplyees);
+//  console.log(Emplyees);
+// console.log(Emplyees[0].id);
+
+const Findindex = (index_array) =>{
+	 index_array = index_array.sort((a,b)=> a-b);
+	 let dublicate_array =[];
+	 for(index in index_array){
+		if(index_array[index]=== index_array[index -1]){
+			dublicate_array.push(index_array[index]);
 		}
-
+	 }
+	 return[...new Set(dublicate_array)];
 	}
- };
- change(Emplyees);
- console.log(Emplyees);
-
+let array =[1,1,2,2,3,4,5,5,6,6,7,7,8,8,9,3,4,65,];
+console.log(Findindex(array));
  
